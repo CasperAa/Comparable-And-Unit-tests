@@ -2,11 +2,13 @@ import java.util.Scanner;
 
 public class LetterToNumberEncryption {
     public static void main(String[] args) {
+        //Scanner asking the user for input
         Scanner userWord = new Scanner(System.in);
         System.out.println("Write a word - I'll encrypt it");
         System.out.println(fromStringToNumber(userWord.nextLine()));
     }
 
+    //replacing chars with numbers
     public static String fromStringToNumber(String toBeEncrypted){
         toBeEncrypted = toBeEncrypted.toLowerCase();
         String encryptedWord = toBeEncrypted
@@ -37,6 +39,7 @@ public class LetterToNumberEncryption {
                 .replace("y","24")
                 .replace("z","25");
 
+        //returning the encrypted word
         return encryptedWord;
     }
 }
